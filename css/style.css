@@ -1,0 +1,262 @@
+:root {
+  --primary: rgb(63, 0, 92);
+  --bg: rgb(22, 121, 27);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  background-color: white;
+  min-height: 2000px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243, 242, 242);
+  padding: 0.7rem 6%;
+  border-bottom: 1px solid rgb(120, 23, 165);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-hom a {
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--bg);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bg);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/bg6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.hero .content {
+  width: 55%;
+}
+
+.hero .content h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  padding: 1rem 10rem;
+  color: var(--primary);
+}
+
+.hero .content h2 {
+  font-size: 2.7rem;
+  font-weight: 200;
+  padding: 0.1rem 10rem;
+  color: var(--primary);
+}
+
+.hero .content h2 span {
+  font-weight: 400;
+}
+
+.hero .content p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 0.1rem 10rem;
+  color: black;
+}
+
+.hero .content .cta a {
+  position: absolute;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 700;
+  font-style: italic;
+  left: 37%;
+  top: 85%;
+}
+
+.hero .content .cta a:hover {
+  color: brown;
+}
+
+.hero .home-img img {
+  width: 20rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/bg4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.about::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.about .content h2 {
+  font-size: 4rem;
+  font-weight: 200;
+  padding: 0 6rem;
+  color: var(--primary);
+}
+
+.about .content h3 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  padding: 1rem 6rem;
+  color: black;
+}
+
+.about .content p {
+  font-size: 1.7rem;
+  font-weight: 200;
+  padding: 0 6rem;
+  color: black;
+  line-height: 2rem;
+  letter-spacing: 0.8px;
+}
+
+.about .content p span {
+  color: rgb(189, 13, 0);
+  font-style: italic;
+  font-weight: 100;
+}
+
+.about .content a {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 5rem;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.about .content a:hover {
+  color: brown;
+}
+
+/* aplikasi */
+.aplikasi h1 {
+  font-size: 2.7rem;
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.aplikasi p {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--primary);
+  text-align: center;
+  padding-top: 1rem;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 1022px) {
+  html {
+    font-size: 62%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 370px) {
+  html {
+    font-size: 35%;
+  }
+}
